@@ -43,7 +43,7 @@ const FooterContainer = styled.div`
   align-items: flex-start;
   margin-top: 50px;
 
-  @media (min-width: 700px) {
+  @media (min-width: 500px) {
     justify-content: space-around;
   }
 `;
