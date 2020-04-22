@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <StyledHeader>
       <HeaderInner>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <Link to="/faq">FAQ</Link>
       </HeaderInner>
     </StyledHeader>
