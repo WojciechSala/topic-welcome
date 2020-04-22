@@ -31,7 +31,6 @@ const StyledFooter = styled.div`
   width: 100%;
   height: 300px;
   background: #f7f7f7;
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,6 +55,7 @@ const FooterContainer = styled.div`
 const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: left;
 
   span {
     margin-top: 15px;

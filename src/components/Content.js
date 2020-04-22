@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import Banner from './Banner';
 
 const Content = () => {
   return (
     <StyledContent>
-      <Heading>The new social media you've been waiting for.</Heading>
       <Hero>
-        <HeroImage></HeroImage>
         <HeroHeading>What's Topic?</HeroHeading>
         <HeroInner>
           <HeroText>
@@ -44,40 +43,11 @@ export default Content;
 
 const StyledContent = styled.div`
   width: 100vw;
-  margin-top: 120px;
-`;
-const Heading = styled.p`
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 700;
-  width: 80%;
-  font-size: 1.8rem;
-
-  margin-bottom: 50px;
-
-  @media (min-width: 500px) {
-    width: 80%;
-    font-size: 2.2rem;
-  }
-  @media (min-width: 820px) {
-    width: 60%;
-    font-size: 2.5rem;
-  }
-  @media (min-width: 1024px) {
-    width: 40%;
-  }
 `;
 const Hero = styled.div`
   margin: 0 auto;
   text-align: center;
   width: 90%;
-`;
-const HeroImage = styled.div`
-  width: 90%;
-  height: 300px;
-  background: grey;
-  margin: 0 auto;
-  margin-bottom: 100px;
 `;
 const HeroHeading = styled.p`
   font-size: 1.5rem;

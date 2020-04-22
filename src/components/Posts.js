@@ -43,12 +43,16 @@ export default Posts;
 
 const StyledPosts = styled.div`
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
+
+  @media (min-width: 600px) {
+    margin-top: 0;
+  }
 `;
 const PostsHeading = styled.p`
   margin: 0 auto;
   text-align: center;
-  width: 90%;
+  width: 80%;
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 50px;
