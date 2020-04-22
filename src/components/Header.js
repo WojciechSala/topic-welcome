@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import logo from '../assets/word 1k or.png';
 
 const Header = () => {
   return (
     <StyledHeader>
       <HeaderInner>
-        <Link to="/">LOGO</Link>
+        <img src={logo} alt="logo" />
         <Link to="/faq">FAQ</Link>
       </HeaderInner>
     </StyledHeader>
@@ -36,4 +37,8 @@ const HeaderInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  img {
+    width: 60px;
+  }
 `;

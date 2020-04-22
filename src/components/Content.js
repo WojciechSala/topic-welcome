@@ -11,9 +11,9 @@ const Content = () => {
         <HeroInner>
           <HeroText>
             Topic is a platform that allows you to meet people that share your{' '}
-            <b>specific</b> interests. You no longer will have to ask questions
-            such as <i>What are you up to?</i> or <i>What's your interests?</i>{' '}
-            Let's just say it's Omegle but with different approach.
+            specific interests. You no longer will have to ask questions such as{' '}
+            <i>What are you up to?</i> or <i>What's your interest?</i> Let's
+            just say it's Omegle but with different approach.
           </HeroText>
           <HeroText>
             If you want to know more about the project we made a{' '}
@@ -50,8 +50,8 @@ const Heading = styled.p`
   margin: 0 auto;
   text-align: center;
   font-weight: 700;
-  width: 90%;
-  font-size: 2rem;
+  width: 80%;
+  font-size: 1.8rem;
 
   margin-bottom: 50px;
 
@@ -80,8 +80,12 @@ const HeroImage = styled.div`
   margin-bottom: 100px;
 `;
 const HeroHeading = styled.p`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
+
+  @media (min-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 const HeroInner = styled.div`
   width: 90%;
@@ -101,8 +105,11 @@ const HeroText = styled.p`
   font-weight: 400;
   margin: 50px 0;
 
+  i {
+    color: #f44336;
+  }
   a {
-    color: #00ffdd;
+    color: #f44336;
     font-weight: 700;
 
     &:hover {

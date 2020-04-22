@@ -50,8 +50,12 @@ const PostsHeading = styled.p`
   text-align: center;
   width: 90%;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 50px;
+
+  @media (min-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 const PostsInner = styled.div`
   display: flex;

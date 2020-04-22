@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from '../assets/word 1k bl.png';
 
 const Footer = () => {
   return (
     <StyledFooter>
       <FooterContainer>
-        <div>LOGO</div>
+        <img src={logo} alt="logo" />
         <FooterSection>
           <SectionHeader>Product</SectionHeader>
           <span>Android App</span>
@@ -42,6 +43,11 @@ const FooterContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 50px;
+
+  img {
+    width: 60px;
+    margin-top: 15px;
+  }
 
   @media (min-width: 500px) {
     justify-content: space-around;
