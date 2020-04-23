@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/word 1k bl.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,13 +10,21 @@ const Footer = () => {
         <img src={logo} alt="logo" />
         <FooterSection>
           <SectionHeader>Product</SectionHeader>
-          <span>Android App</span>
-          <span>iOS App</span>
-          <span>Web App</span>
+          <span>
+            <Link to="/faq">Android App</Link>
+          </span>
+          <span>
+            <Link to="/faq">iOS App</Link>
+          </span>
+          <span>
+            <Link to="/faq">Web App</Link>
+          </span>
         </FooterSection>
         <FooterSection>
           <SectionHeader>Resources</SectionHeader>
-          <span>About & FAQ</span>
+          <span>
+            <Link to="/faq">About & FAQ</Link>
+          </span>
           <span>Feedback</span>
           <span>Support</span>
           <span>Terms & Privacy</span>
@@ -50,6 +59,10 @@ const FooterContainer = styled.div`
 
   @media (min-width: 500px) {
     justify-content: space-around;
+  }
+
+  @media (min-width: 1400px) {
+    width: 1000px;
   }
 `;
 const FooterSection = styled.div`

@@ -80,4 +80,9 @@ const PostsInner = styled.div`
     justify-content: space-evenly;
     align-items: center;
   }
+
+  @media (min-width: 1400px) {
+    width: 1000px;
+    margin: 0 auto;
+  }
 `;

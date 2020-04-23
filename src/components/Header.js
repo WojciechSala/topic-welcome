@@ -10,7 +10,9 @@ const Header = () => {
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
-        <Link to="/faq">FAQ</Link>
+        <Link class="more-btn" to="/faq">
+          MORE DETAILS
+        </Link>
       </HeaderInner>
     </StyledHeader>
   );
@@ -42,5 +44,22 @@ const HeaderInner = styled.div`
 
   img {
     width: 60px;
+  }
+
+  .more-btn {
+    transition: color 0.3s ease-in;
+    -webkit-transition: color 0.3s ease-in;
+    -moz-transition: color 0.3s ease-in;
+    -ms-transition: color 0.3s ease-in;
+    -o-transition: color 0.3s ease-in;
+
+    :hover {
+      color: #f44336;
+      transition: color 0.3s ease-in
+      -webkit-transition: color 0.3s ease-in;
+      -moz-transition: color 0.3s ease-in;
+      -ms-transition: color 0.3s ease-in;
+      -o-transition: color 0.3s ease-in;
+    }
   }
 `;

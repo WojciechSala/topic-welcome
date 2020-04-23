@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Content = () => {
   return (
@@ -14,7 +15,8 @@ const Content = () => {
             just say it's Omegle but with different approach.
           </HeroText>
           <HeroText>
-            If you want to know more about the project we made a{' '}
+            If you want to know <Link to="/faq">more about the project</Link> we
+            made a{' '}
             <a
               href="https://www.behance.net/gallery/95608867/Topic-app-mockup"
               target="_blank"
@@ -42,6 +44,7 @@ export default Content;
 
 const StyledContent = styled.div`
   width: 100vw;
+  font-weight: 300;
 `;
 const Hero = styled.div`
   margin: 0 auto;
@@ -66,6 +69,9 @@ const HeroInner = styled.div`
     justify-content: space-around;
     align-items: flex-start;
   }
+  @media (min-width: 1400px) {
+    width: 1000px;
+  }
 `;
 const HeroText = styled.p`
   text-align: left;
@@ -79,7 +85,7 @@ const HeroText = styled.p`
   }
   a {
     color: #f44336;
-    font-weight: 700;
+    font-weight: 500;
 
     &:hover {
       cursor: pointer;

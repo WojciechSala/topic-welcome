@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Content from '../components/Content';
@@ -8,33 +8,78 @@ import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import firstPlan from '../assets/1st.png';
 import secondPlan from '../assets/2nd.png';
 
-const Home = () => {
-  return (
-    <StyledHome>
-      <Header />
-      <Parallax pages={window.innerWidth > 800 ? 2.9 : 3.6}>
-        <ParallaxLayer offset={0.3} speed={0.5}>
-          <Heading>The new social media you've been waiting for.</Heading>
-        </ParallaxLayer>
-        <ParallaxLayer offset={0.7} speed={0.5}>
-          <img src={secondPlan} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={0.8} speed={1}>
-          <img src={firstPlan} />
-        </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0.5}>
-          <Content />
-        </ParallaxLayer>
-        <ParallaxLayer offset={window.innerWidth > 800 ? 1.7 : 1.8} speed={0.5}>
-          <Posts />
-        </ParallaxLayer>
-        <ParallaxLayer offset={window.innerWidth > 800 ? 2.45 : 3} speed={0.5}>
-          <Footer />
-        </ParallaxLayer>
-      </Parallax>
-    </StyledHome>
-  );
-};
+class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      parallax: {
+        pages: 3.6,
+        content: 1,
+        posts: 1.8,
+        footer: 3,
+      },
+    };
+  }
+
+  componentDidMount() {
+    if (window.innerWidth < 800 && window.innerHeight > 760) {
+      this.setState({
+        parallax: {
+          pages: 3,
+          content: 1,
+          posts: 1.6,
+          footer: 2.7,
+        },
+      });
+    } else if (window.innerWidth > 800 && window.innerHeight < 760) {
+      this.setState({
+        parallax: {
+          pages: 3,
+          content: 1.2,
+          posts: 1.9,
+          footer: 2.6,
+        },
+      });
+    } else if (window.innerWidth > 800 && window.innerHeight > 760) {
+      this.setState({
+        parallax: {
+          pages: 2.54,
+          content: 1,
+          posts: 1.6,
+          footer: 2,
+        },
+      });
+    }
+  }
+
+  render() {
+    return (
+      <StyledHome>
+        <Header />
+        <Parallax pages={this.state.parallax.pages}>
+          <ParallaxLayer offset={0.3} speed={0.5}>
+            <Heading>The new social media you've been waiting for.</Heading>
+          </ParallaxLayer>
+          <ParallaxLayer offset={0.7} speed={0.5}>
+            <img src={secondPlan} alt="parallax second plan smartphones" />
+          </ParallaxLayer>
+          <ParallaxLayer offset={0.8} speed={1}>
+            <img src={firstPlan} alt="parallax first plan smartphones" />
+          </ParallaxLayer>
+          <ParallaxLayer offset={this.state.parallax.content} speed={0.5}>
+            <Content />
+          </ParallaxLayer>
+          <ParallaxLayer offset={this.state.parallax.posts} speed={0.5}>
+            <Posts />
+          </ParallaxLayer>
+          <ParallaxLayer offset={this.state.parallax.footer} speed={0.5}>
+            <Footer />
+          </ParallaxLayer>
+        </Parallax>
+      </StyledHome>
+    );
+  }
+}
 
 export default Home;
 
