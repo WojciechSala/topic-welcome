@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import logo from '../assets/word 1k bl.png';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({ lang }) => {
   return (
     <StyledFooter>
       <FooterContainer>
         <img src={logo} alt="logo" />
         <FooterSection>
-          <SectionHeader>Product</SectionHeader>
+          <SectionHeader>{lang === 'pl' ? 'Produkt' : 'Product'}</SectionHeader>
           <span>
             <Link to="/faq">Android App</Link>
           </span>
@@ -20,15 +20,28 @@ const Footer = () => {
             <Link to="/faq">Web App</Link>
           </span>
         </FooterSection>
-        <FooterSection>
-          <SectionHeader>Resources</SectionHeader>
-          <span>
-            <Link to="/faq">About & FAQ</Link>
-          </span>
-          <span>Feedback</span>
-          <span>Support</span>
-          <span>Terms & Privacy</span>
-        </FooterSection>
+
+        {lang === 'pl' ? (
+          <FooterSection>
+            <SectionHeader>Dokumenty</SectionHeader>
+            <span>
+              <Link to="/faq">O nas & FAQ</Link>
+            </span>
+            <span>Opinia</span>
+            <span>Pomoc</span>
+            <span>Polityka pryywatności</span>
+          </FooterSection>
+        ) : (
+          <FooterSection>
+            <SectionHeader>Resources</SectionHeader>
+            <span>
+              <Link to="/faq">About & FAQ</Link>
+            </span>
+            <span>Feedback</span>
+            <span>Support</span>
+            <span>Terms & Privacy</span>
+          </FooterSection>
+        )}
       </FooterContainer>
     </StyledFooter>
   );
@@ -50,7 +63,7 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 30px;
 
   img {
     width: 60px;

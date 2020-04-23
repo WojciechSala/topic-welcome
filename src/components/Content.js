@@ -2,40 +2,76 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Content = () => {
+const Content = ({ lang }) => {
   return (
     <StyledContent>
-      <Hero>
-        <HeroHeading>What's Topic?</HeroHeading>
-        <HeroInner>
-          <HeroText>
-            Topic is a platform that allows you to meet people that share your{' '}
-            specific interests. You no longer will have to ask questions such as{' '}
-            <i>What are you up to?</i> or <i>What's your interest?</i> Let's
-            just say it's Omegle but with different approach.
-          </HeroText>
-          <HeroText>
-            If you want to know <Link to="/faq">more about the project</Link> we
-            made a{' '}
-            <a
-              href="https://www.behance.net/gallery/95608867/Topic-app-mockup"
-              target="_blank"
-            >
-              mockup
-            </a>{' '}
-            that shows some of our features. If you like our idea and want us to
-            succeed as we do, check out our{' '}
-            <a href="https://www.facebook.com/topicplatform/" target="_blank">
-              facebook
-            </a>{' '}
-            and{' '}
-            <a href="https://twitter.com/topicplatform" target="_blank">
-              twitter
-            </a>{' '}
-            page, leave a follow and share!
-          </HeroText>
-        </HeroInner>
-      </Hero>
+      {lang === 'pl' ? (
+        <Hero>
+          <HeroHeading>Czym jest Topic?</HeroHeading>
+          <HeroInner>
+            <HeroText>
+              Topic to platforma, która pozwoli Ci poznac osoby podzielające
+              twoje zainteresowania. Nie będziesz musiał już więcej zadawać
+              pytań jak <i>Jakie są twoje zainteresowania?</i> czy{' '}
+              <i>Czym się zajmujesz?</i> Powiedzmy, że nasza platforma to Omegle
+              ale z innym podejściem i celem.
+            </HeroText>
+            <HeroText>
+              Jeśli chcesz się dowiedzieć
+              <Link to="/faq"> więcej o projekcie</Link> stworzyliśmy
+              <a
+                href="https://www.behance.net/gallery/95608867/Topic-app-mockup"
+                target="_blank"
+              >
+                {' '}
+                mockup
+              </a>{' '}
+              który pokazuje kilka ciekawych funkcji. Jeśli podoba Ci się nasz
+              pomysł i chcesz nam pomóc się rozwijać, sprawdź naszego{' '}
+              <a href="https://www.facebook.com/topicplatform/" target="_blank">
+                facebooka
+              </a>{' '}
+              i{' '}
+              <a href="https://twitter.com/topicplatform" target="_blank">
+                twittera
+              </a>{' '}
+              oraz zostaw like i udostępnij innym!
+            </HeroText>
+          </HeroInner>
+        </Hero>
+      ) : (
+        <Hero>
+          <HeroHeading>What's Topic?</HeroHeading>
+          <HeroInner>
+            <HeroText>
+              Topic is a platform that allows you to meet people that share your{' '}
+              specific interests. You no longer will have to ask questions such
+              as <i>What are you up to?</i> or <i>What's your interest?</i>{' '}
+              Let's just say it's Omegle but with different approach.
+            </HeroText>
+            <HeroText>
+              If you want to know <Link to="/faq">more about the project</Link>{' '}
+              we made a{' '}
+              <a
+                href="https://www.behance.net/gallery/95608867/Topic-app-mockup"
+                target="_blank"
+              >
+                mockup
+              </a>{' '}
+              that shows some of our features. If you like our idea and want us
+              to succeed as we do, check out our{' '}
+              <a href="https://www.facebook.com/topicplatform/" target="_blank">
+                facebook
+              </a>{' '}
+              and{' '}
+              <a href="https://twitter.com/topicplatform" target="_blank">
+                twitter
+              </a>{' '}
+              page, leave a follow and share!
+            </HeroText>
+          </HeroInner>
+        </Hero>
+      )}
     </StyledContent>
   );
 };

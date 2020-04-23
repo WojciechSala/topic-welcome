@@ -7,11 +7,13 @@ import Footer from '../components/Footer';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import firstPlan from '../assets/1st.png';
 import secondPlan from '../assets/2nd.png';
+import detectBrowserLanguage from 'detect-browser-language';
 
 class Home extends Component {
   constructor() {
     super();
     this.state = {
+      lang: 'en',
       parallax: {
         pages: 3.6,
         content: 1,
@@ -22,6 +24,11 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    const lang = detectBrowserLanguage();
+    if (lang === 'pl') this.setState({ lang: 'pl' });
+    else this.setState({ lang: 'en' });
+
+    // Parallax RWD
     if (window.innerWidth < 800 && window.innerHeight > 760) {
       this.setState({
         parallax: {
@@ -55,10 +62,14 @@ class Home extends Component {
   render() {
     return (
       <StyledHome>
-        <Header />
+        <Header lang={this.state.lang} />
         <Parallax pages={this.state.parallax.pages}>
           <ParallaxLayer offset={0.3} speed={0.5}>
-            <Heading>The new social media you've been waiting for.</Heading>
+            <Heading>
+              {this.state.lang === 'pl'
+                ? 'Nowe media społecznościowe na jakie czekałeś.'
+                : "The new social media you've been waiting for."}
+            </Heading>
           </ParallaxLayer>
           <ParallaxLayer offset={0.7} speed={0.5}>
             <img src={secondPlan} alt="parallax second plan smartphones" />
@@ -67,13 +78,13 @@ class Home extends Component {
             <img src={firstPlan} alt="parallax first plan smartphones" />
           </ParallaxLayer>
           <ParallaxLayer offset={this.state.parallax.content} speed={0.5}>
-            <Content />
+            <Content lang={this.state.lang} />
           </ParallaxLayer>
           <ParallaxLayer offset={this.state.parallax.posts} speed={0.5}>
             <Posts />
           </ParallaxLayer>
           <ParallaxLayer offset={this.state.parallax.footer} speed={0.5}>
-            <Footer />
+            <Footer lang={this.state.lang} />
           </ParallaxLayer>
         </Parallax>
       </StyledHome>

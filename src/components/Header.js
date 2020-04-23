@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../assets/word 1k or.png';
 
-const Header = () => {
+const Header = ({ lang }) => {
   return (
     <StyledHeader>
       <HeaderInner>
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
+
         <Link class="more-btn" to="/faq">
-          MORE DETAILS
+          {lang === 'pl' ? 'WIĘCEJ SZCZEGÓŁÓW' : 'MORE DETAILS'}
         </Link>
       </HeaderInner>
     </StyledHeader>
@@ -35,9 +36,8 @@ const StyledHeader = styled.header`
 `;
 const HeaderInner = styled.div`
   width: calc(100vw - 100px);
-  height: 100%;
-  margin: 0 auto;
-  font-weight: 500;
+  height: 100%; margin: 0 auto;
+   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: space-between;
