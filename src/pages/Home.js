@@ -29,7 +29,16 @@ class Home extends Component {
     else this.setState({ lang: 'en' });
 
     // Parallax RWD
-    if (window.innerWidth < 800 && window.innerHeight > 760) {
+    if (window.innerWidth < 700 && window.innerHeight < 700) {
+      this.setState({
+        parallax: {
+          pages: 4,
+          content: 1,
+          posts: 1.95,
+          footer: 3.5,
+        },
+      });
+    } else if (window.innerWidth < 800 && window.innerHeight > 760) {
       this.setState({
         parallax: {
           pages: 3,

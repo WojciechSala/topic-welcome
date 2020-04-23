@@ -29,7 +29,7 @@ const Footer = ({ lang }) => {
             </span>
             <span>Opinia</span>
             <span>Pomoc</span>
-            <span>Polityka pryywatności</span>
+            <span>Polityka prywatności</span>
           </FooterSection>
         ) : (
           <FooterSection>
