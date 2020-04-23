@@ -35,7 +35,7 @@ class Home extends Component {
           pages: 4,
           content: 1,
           posts: 1.95,
-          footer: 3.5,
+          footer: 3.55,
         },
       });
     } else if (window.innerWidth < 800 && window.innerHeight > 760) {
