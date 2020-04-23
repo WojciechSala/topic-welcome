@@ -25,7 +25,7 @@ class Home extends Component {
 
   componentDidMount() {
     const lang = detectBrowserLanguage();
-    if (lang === 'pl') this.setState({ lang: 'pl' });
+    if (lang === 'pl-PL' || lang === 'pl') this.setState({ lang: 'pl' });
     else this.setState({ lang: 'en' });
 
     // Parallax RWD
@@ -52,7 +52,7 @@ class Home extends Component {
         parallax: {
           pages: 2.54,
           content: 1,
-          posts: 1.6,
+          posts: 1.5,
           footer: 2,
         },
       });

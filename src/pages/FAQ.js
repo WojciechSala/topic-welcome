@@ -15,7 +15,7 @@ class FAQ extends Component {
 
   componentDidMount() {
     const lang = detectBrowserLanguage();
-    if (lang === 'pl') this.setState({ FAQfile: plFAQ });
+    if (lang === 'pl-PL' || lang === 'pl') this.setState({ FAQfile: plFAQ });
     else this.setState({ FAQfile: enFAQ });
   }
   render() {
@@ -30,7 +30,8 @@ class FAQ extends Component {
             </FAQInner>
           ))}
 
-          {detectBrowserLanguage() === 'pl' ? (
+          {detectBrowserLanguage() === 'pl-PL' ||
+          detectBrowserLanguage() === 'pl' ? (
             <Answer>
               1. Po otwarciu aplikacji, użytkownik wybiera język, w którym
               będzie rozmawiał z innymi.

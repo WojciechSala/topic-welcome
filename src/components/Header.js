@@ -12,7 +12,9 @@ const Header = ({ lang }) => {
         </Link>
 
         <Link class="more-btn" to="/faq">
-          {lang === 'pl' ? 'WIĘCEJ SZCZEGÓŁÓW' : 'MORE DETAILS'}
+          {lang === 'pl-PL' || lang === 'pl'
+            ? 'WIĘCEJ SZCZEGÓŁÓW'
+            : 'MORE DETAILS'}
         </Link>
       </HeaderInner>
     </StyledHeader>
