@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Posts = () => {
+const Posts = ({ lang }) => {
   return (
     <StyledPosts>
-      <PostsHeading>Check our social media and share!</PostsHeading>
+      <PostsHeading>
+        {lang === 'pl-PL' || lang === 'pl'
+          ? 'Sprawdź nasze media społecznościowe i udostępnij!'
+          : 'Check our social media and share!'}
+      </PostsHeading>
       <PostsInner>
         <div
           class="fb-page"
@@ -13,7 +17,7 @@ const Posts = () => {
           data-width="350"
           data-height="600"
           data-small-header="false"
-          data-adapt-container-width="true"
+          data-adapt-container-width="false"
           data-hide-cover="false"
           data-show-facepile="true"
         >

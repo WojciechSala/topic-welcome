@@ -90,7 +90,7 @@ class Home extends Component {
             <Content lang={this.state.lang} />
           </ParallaxLayer>
           <ParallaxLayer offset={this.state.parallax.posts} speed={0.5}>
-            <Posts />
+            <Posts lang={this.state.lang} />
           </ParallaxLayer>
           <ParallaxLayer offset={this.state.parallax.footer} speed={0.5}>
             <Footer lang={this.state.lang} />

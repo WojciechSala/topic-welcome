@@ -10,11 +10,11 @@ const Content = ({ lang }) => {
           <HeroHeading>Czym jest Topic?</HeroHeading>
           <HeroInner>
             <HeroText>
-              Topic to platforma, która pozwoli Ci poznac osoby podzielające
-              twoje zainteresowania. Nie będziesz musiał już więcej zadawać
-              pytań jak <i>Jakie są twoje zainteresowania?</i> czy{' '}
-              <i>Czym się zajmujesz?</i> Powiedzmy, że nasza platforma to Omegle
-              ale z innym podejściem i celem.
+              Topic to platforma, która pozwoli Ci poznać osoby podzielające
+              Twoje zainteresowania. Nie będziesz musiał już więcej zadawać
+              pytań takich jak <i>Jakie są twoje zainteresowania?</i> czy{' '}
+              <i>Czym się zajmujesz?</i> Oferujemy wiele opcji ulepszających
+              doświadczenie użytkownika.
             </HeroText>
             <HeroText>
               Jeśli chcesz się dowiedzieć
@@ -46,8 +46,8 @@ const Content = ({ lang }) => {
             <HeroText>
               Topic is a platform that allows you to meet people that share your{' '}
               specific interests. You no longer will have to ask questions such
-              as <i>What are you up to?</i> or <i>What's your interest?</i>{' '}
-              Let's just say it's Omegle but with different approach.
+              as <i>What are you up to?</i> or <i>What's your interest?</i> We
+              offer a lot of options to make the experience best possible.
             </HeroText>
             <HeroText>
               If you want to know <Link to="/faq">more about the project</Link>{' '}
