@@ -10,11 +10,11 @@ const Content = ({ lang }) => {
           <HeroHeading>Czym jest Topic?</HeroHeading>
           <HeroInner>
             <HeroText>
-              Topic to platforma, która pozwoli Ci poznać osoby podzielające
-              Twoje zainteresowania. Nie będziesz musiał już więcej zadawać
-              pytań takich jak <i>Jakie są twoje zainteresowania?</i> czy{' '}
-              <i>Czym się zajmujesz?</i> Oferujemy wiele opcji ulepszających
-              doświadczenie użytkownika.
+              Topic to wideo czat łączący ze sobą osoby o wspólnych pasjach.
+              Nasza platforma scala ze sobą komunikator z kategoriami - tworząc
+              lepsze zastosowanie, pozwalające Ci na naukę, rozmowę na tematy,
+              które kochasz czy nawet poznanie miłości, która rozumie twoje
+              zainteresowania.
             </HeroText>
             <HeroText>
               Jeśli chcesz się dowiedzieć
@@ -44,10 +44,10 @@ const Content = ({ lang }) => {
           <HeroHeading>What's Topic?</HeroHeading>
           <HeroInner>
             <HeroText>
-              Topic is a platform that allows you to meet people that share your{' '}
-              specific interests. You no longer will have to ask questions such
-              as <i>What are you up to?</i> or <i>What's your interest?</i> We
-              offer a lot of options to make the experience best possible.
+              Topic is a video chat linking people with the same passion. Our
+              platform merges communicators with categories - creating better
+              use, allowing you to learn, talk on subjects you love or even meet
+              a soulmate that gets your interests.
             </HeroText>
             <HeroText>
               If you want to know <Link to="/faq">more about the project</Link>{' '}
@@ -90,6 +90,7 @@ const Hero = styled.div`
 const HeroHeading = styled.p`
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 50px;
 
   @media (min-width: 500px) {
     font-size: 2rem;
